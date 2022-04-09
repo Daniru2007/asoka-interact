@@ -1,8 +1,13 @@
 * {
-    color: rgb(0, 0, 0);
+    color: white;
 }
 html {
-    background-color: rgb(175, 175, 175);
+    background: linear-gradient(
+        to right,
+        black,
+        rgb(105, 105, 0),
+        rgb(173, 0, 0)
+    );
 }
 .heading {
     margin-top: auto;
@@ -15,7 +20,7 @@ html {
     animation-duration: 1s; /* don't forget to set a duration! */
 }
 .heading:hover {
-    color: rgb(185, 0, 0);
+    color: white;
     display: inline-block;
 
     animation-name: rubberBand, red_yellow;
@@ -27,8 +32,11 @@ html {
     0% {
         color: yellow;
     }
-    100% {
+    75% {
         color: rgb(185, 0, 0);
+    }
+    100% {
+        color: white;
     }
 }
 
