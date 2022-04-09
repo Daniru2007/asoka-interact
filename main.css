@@ -19,7 +19,7 @@ html {
     display: inline-block;
 
     animation-name: rubberBand, red_yellow;
-    animation-duration: 1s, 1.5s; /* don't forget to set a duration! */
+    animation-duration: 1.2s, 1.5s; /* don't forget to set a duration! */
     animation-iteration-count: 1, 1;
 }
 
