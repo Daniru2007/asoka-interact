@@ -2,14 +2,20 @@
     color: white;
 }
 html {
-    background: linear-gradient(
-        to right,
-        black,
-        rgb(105, 105, 0),
-        rgb(173, 0, 0)
-    );
+    background: linear-gradient(to right, black, rgb(173, 0, 0));
 }
-.up {
+.head {
+    display: grid;
+    grid-template-columns: auto auto;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently*/
+}
+.topic {
+    margin: 30px;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
@@ -58,4 +64,14 @@ html {
 .interact,
 .club {
     font-size: 75px;
+}
+
+.logo {
+    display: inline-block;
+    margin: 30px;
+    width: 300px;
+    border-radius: 100%;
+    animation: fadeInDown;
+    animation-duration: 1s;
+    box-shadow: 30px 30px 30px;
 }
