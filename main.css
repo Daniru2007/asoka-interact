@@ -1,0 +1,38 @@
+* {
+    color: rgb(0, 0, 0);
+}
+html {
+    background-color: rgb(175, 175, 175);
+}
+.heading {
+    margin-top: auto;
+    position: relative;
+    font-family: "Segoe UI";
+    font-size: 100px;
+    display: inline-block;
+
+    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
+}
+.heading:hover {
+    color: rgb(185, 0, 0);
+    display: inline-block;
+
+    animation-name: rubberBand, red_yellow;
+    animation-duration: 1s, 1.5s; /* don't forget to set a duration! */
+    animation-iteration-count: 1, 1;
+}
+
+@keyframes red_yellow {
+    0% {
+        color: yellow;
+    }
+    100% {
+        color: rgb(185, 0, 0);
+    }
+}
+
+.interact,
+.club {
+    font-size: 75px;
+}
