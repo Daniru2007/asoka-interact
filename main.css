@@ -109,7 +109,6 @@ body {
 }
 
 .main {
-    margin-top: 50px;
     background-color: #090b10;
     width: 100vw;
     height: 100vh;
@@ -124,6 +123,7 @@ body {
 }
 
 .main__heading {
+    margin-top: 50px;
     font-size: 50px;
     font-weight: normal;
 }
@@ -135,8 +135,8 @@ body {
 }
 
 .box {
-    margin: 50px;
-    margin-right: 60px;
+    margin: 100px;
+    margin-right: 110px;
     padding: 50px;
     background-color: #0f111a;
     border-radius: 25px;
