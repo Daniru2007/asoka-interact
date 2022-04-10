@@ -175,3 +175,71 @@ body {
 .club-class {
     display: inline-block;
 }
+
+.project {
+    transform: scale(1);
+    -ms-transform: scale(1); /* IE 9 */
+    -moz-transform: scale(1); /* Firefox */
+    -webkit-transform: scale(1); /* Safari and Chrome */
+    -o-transform: scale(1); /* Opera */
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    animation-name: make-small;
+    animation-duration: 1s;
+}
+
+.project:hover {
+    transform: scale(1.2);
+    -ms-transform: scale(1.2); /* IE 9 */
+    -moz-transform: scale(1.2); /* Firefox */
+    -webkit-transform: scale(1.2); /* Safari and Chrome */
+    -o-transform: scale(1.2); /* Opera */
+    animation-name: make-big;
+    animation-duration: 2s;
+}
+
+@keyframes make-small {
+    from {
+        transform: scale(1.2);
+        -ms-transform: scale(1.2); /* IE 9 */
+        -moz-transform: scale(1.2); /* Firefox */
+        -webkit-transform: scale(1.2); /* Safari and Chrome */
+        -o-transform: scale(1.2); /* Opera */
+    }
+    to {
+        transform: scale(1);
+        -ms-transform: scale(1); /* IE 9 */
+        -moz-transform: scale(1); /* Firefox */
+        -webkit-transform: scale(1); /* Safari and Chrome */
+        -o-transform: scale(1); /* Opera */
+    }
+}
+
+@keyframes make-big {
+    from {
+        transform: scale(1);
+        -ms-transform: scale(1); /* IE 9 */
+        -moz-transform: scale(1); /* Firefox */
+        -webkit-transform: scale(1); /* Safari and Chrome */
+        -o-transform: scale(1); /* Opera */
+    }
+    to {
+        transform: scale(1.2);
+        -ms-transform: scale(1.2); /* IE 9 */
+        -moz-transform: scale(1.2); /* Firefox */
+        -webkit-transform: scale(1.2); /* Safari and Chrome */
+        -o-transform: scale(1.2); /* Opera */
+    }
+}
+
+.img-wrapper {
+    display: inline-block;
+    margin: 50px;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    overflow: hidden;
+}
