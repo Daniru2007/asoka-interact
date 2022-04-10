@@ -3,6 +3,13 @@
     color: white;
     scroll-behavior: smooth;
 }
+
+*::selection {
+    background-color: rgba(0, 255, 255, 0.219);
+}
+::selection {
+    background-color: rgba(0, 255, 255, 0.219);
+}
 body {
     background-color: #090b10;
     overflow-x: hidden;
@@ -98,17 +105,66 @@ body {
 }
 
 .arrow-down:hover {
-    border-top: 20px solid rgb(121, 121, 121);
+    border-top: 20px solid aqua;
 }
 
 .main {
+    margin-top: 50px;
     background-color: #090b10;
     width: 100vw;
     height: 100vh;
+    font-family: "Segoe UI";
 }
 
 .break {
     height: 1px;
     width: 50%;
     background-color: aqua;
+    justify-content: center;
+}
+
+.main__heading {
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.main__content {
+    overflow-wrap: normal;
+    margin: 50px;
+    margin-left: 60px;
+}
+
+.box {
+    margin: 50px;
+    margin-right: 60px;
+    padding: 50px;
+    background-color: #0f111a;
+    border-radius: 25px;
+    box-shadow: 0px 0px 30px black;
+    animation-name: glow-off;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+}
+
+.box:hover {
+    box-shadow: 0px 0px 30px aqua;
+    animation-name: glow;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+}
+@keyframes glow {
+    from {
+        box-shadow: 0px 0px 30px black;
+    }
+    to {
+        box-shadow: 0px 0px 30px aqua;
+    }
+}
+@keyframes glow-off {
+    from {
+        box-shadow: 0px 0px 30px aqua;
+    }
+    to {
+        box-shadow: 0px 0px 30px black;
+    }
 }
