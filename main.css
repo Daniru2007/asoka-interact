@@ -19,8 +19,10 @@ body {
     margin: 0%;
     width: 100vw;
     height: 100vh;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
@@ -30,7 +32,9 @@ body {
 }
 .topic {
     margin: 30px;
-    margin-top: 10%;
+    display: inline-block;
+
+    /* margin-top: 10%; */
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
@@ -81,7 +85,7 @@ body {
 .logo {
     display: inline-block;
     margin: 30px;
-    margin-top: 30%;
+    /* margin-top: 30%; */
     width: 300px;
     border-radius: 100%;
     animation: fadeInDown;
@@ -245,105 +249,18 @@ body {
     border-radius: 30px;
     overflow: hidden;
 }
-@media screen and (max-width: 1250px) {
-    .heading {
-        font-size: 60px;
-    }
-    .big {
-        font-size: 100px;
-    }
-    .interact,
-    .club {
-        font-size: 40px;
-    }
-}
 
-@media screen and (max-height: 500px) and (max-width: 1000px) {
+@media screen and (max-width: 820px) {
+    .head {
+        flex-direction: column;
+    }
+    .topic {
+        justify-self: center;
+    }
     .heading {
         font-size: 50px;
     }
     .big {
-        font-size: 90px;
-    }
-    .interact,
-    .club {
-        font-size: 30px;
-    }
-    .logo {
-        margin-top: 20%;
-    }
-}
-
-@media screen and (max-height: 500px) and (max-width: 900px) {
-    .logo {
-        width: 250px;
-    }
-}
-
-@media screen and (max-height: 500px) and (max-width: 850px) {
-    .heading {
-        font-size: 40px;
-    }
-    .big {
-        font-size: 75px;
-    }
-    .interact,
-    .club {
-        font-size: 20px;
-    }
-    .logo {
-        margin-top: 20%;
-    }
-}
-
-@media screen and (max-height: 500px) and (max-width: 770px) {
-    .logo {
-        width: 200px;
-    }
-}
-
-@media screen and (max-height: 500px) and (max-width: 715px) {
-    .topic {
-        margin-top: 30%;
-    }
-    .heading {
-        font-size: 30px;
-    }
-    .big {
-        font-size: 65px;
-    }
-    .interact,
-    .club {
-        font-size: 15px;
-    }
-    .logo {
-        margin-top: 40%;
-    }
-}
-
-@media screen and (max-height: 500px) and (max-width: 650px) {
-    .head {
-        grid-template-columns: auto;
-        align-items: center;
-        align-content: center;
-    }
-    .topic {
-        margin-top: 0%;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    .heading {
-        font-size: 30px;
-    }
-    .big {
-        font-size: 60px;
-    }
-    .interact,
-    .club {
-        font-size: 15px;
-    }
-    .logo {
-        margin-top: 0%;
-        margin-left: 35%;
+        font-size: 70px;
     }
 }
