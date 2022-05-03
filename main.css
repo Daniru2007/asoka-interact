@@ -191,6 +191,11 @@ body {
     height: 250px;
     border-radius: 30px;
     overflow: hidden;
+    box-shadow: 0px 0px 0px black;
+    transition: box-shadow 750ms;
+}
+.img-wrapper:hover {
+    box-shadow: 0px 0px 50px rgb(0, 17, 255);
 }
 
 @media screen and (max-width: 820px) {
