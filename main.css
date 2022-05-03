@@ -146,33 +146,13 @@ body {
     padding: 50px;
     background-color: #0f111a;
     border-radius: 25px;
-    box-shadow: 0px 0px 30px black;
+    box-shadow: 0px 0px 50px black;
     animation-name: glow-off;
-    animation-duration: 500ms;
-    animation-iteration-count: 1;
+    transition: all 750ms;
 }
 
 .box:hover {
-    box-shadow: 0px 0px 30px aqua;
-    animation-name: glow;
-    animation-duration: 500ms;
-    animation-iteration-count: 1;
-}
-@keyframes glow {
-    from {
-        box-shadow: 0px 0px 30px black;
-    }
-    to {
-        box-shadow: 0px 0px 30px aqua;
-    }
-}
-@keyframes glow-off {
-    from {
-        box-shadow: 0px 0px 30px aqua;
-    }
-    to {
-        box-shadow: 0px 0px 30px black;
-    }
+    box-shadow: 0px 0px 50px aqua;
 }
 
 .asoka-class,
@@ -183,6 +163,7 @@ body {
 }
 
 .project {
+    cursor: pointer;
     transform: scale(1);
     -ms-transform: scale(1); /* IE 9 */
     -moz-transform: scale(1); /* Firefox */
@@ -192,8 +173,7 @@ body {
     width: 250px;
     height: 250px;
     border-radius: 30px;
-    animation-name: make-small;
-    animation-duration: 1s;
+    transition: all 2s;
 }
 
 .project:hover {
@@ -202,44 +182,7 @@ body {
     -moz-transform: scale(1.2); /* Firefox */
     -webkit-transform: scale(1.2); /* Safari and Chrome */
     -o-transform: scale(1.2); /* Opera */
-    animation-name: make-big;
-    animation-duration: 2s;
 }
-
-@keyframes make-small {
-    from {
-        transform: scale(1.2);
-        -ms-transform: scale(1.2); /* IE 9 */
-        -moz-transform: scale(1.2); /* Firefox */
-        -webkit-transform: scale(1.2); /* Safari and Chrome */
-        -o-transform: scale(1.2); /* Opera */
-    }
-    to {
-        transform: scale(1);
-        -ms-transform: scale(1); /* IE 9 */
-        -moz-transform: scale(1); /* Firefox */
-        -webkit-transform: scale(1); /* Safari and Chrome */
-        -o-transform: scale(1); /* Opera */
-    }
-}
-
-@keyframes make-big {
-    from {
-        transform: scale(1);
-        -ms-transform: scale(1); /* IE 9 */
-        -moz-transform: scale(1); /* Firefox */
-        -webkit-transform: scale(1); /* Safari and Chrome */
-        -o-transform: scale(1); /* Opera */
-    }
-    to {
-        transform: scale(1.2);
-        -ms-transform: scale(1.2); /* IE 9 */
-        -moz-transform: scale(1.2); /* Firefox */
-        -webkit-transform: scale(1.2); /* Safari and Chrome */
-        -o-transform: scale(1.2); /* Opera */
-    }
-}
-
 .img-wrapper {
     display: inline-block;
     margin: 50px;
@@ -263,4 +206,27 @@ body {
     .big {
         font-size: 70px;
     }
+}
+/* width */
+::-webkit-scrollbar {
+    background-color: hsl(235, 24%, 19%);
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: hsla(235, 21%, 11%, 0.322);
+    box-shadow: 0 0 3px hsl(235, 21%, 11%);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: hsl(234, 87%, 15%);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: aqua;
 }
