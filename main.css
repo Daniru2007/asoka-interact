@@ -2,6 +2,7 @@
     margin: 0%;
     color: white;
     scroll-behavior: smooth;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 *::selection {
@@ -138,6 +139,8 @@ body {
     overflow-wrap: normal;
     margin: 50px;
     margin-left: 60px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .box {
