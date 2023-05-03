@@ -31,6 +31,61 @@ body {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently*/
 }
+nav {
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+	/* background: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)); */
+}
+
+nav img{
+	width: 250px;
+	padding-top: 10px;
+}
+
+.nav-links{
+	flex: 1;
+	text-align: right;
+}
+
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+
+.nav-links ul li a{
+	color: #fff;
+	text-decoration: none;
+    font-size: 25px;
+}
+
+.nav-links ul li a::after{
+	content: '';
+	width: 0%;
+	height: 4.5px;
+	border-radius: 10px;
+	background: rgb(144, 227, 238);
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+
+.nav-links ul li a:hover::after{
+	width: 100%;
+}
+
+.active{
+	width: 100%;
+	background: rgb(144, 227, 238);
+	border-radius: 10px;
+	display: block;
+	padding-right: 10px;
+ }
+
+
 .topic {
     margin: 30px;
     display: inline-block;
@@ -67,6 +122,64 @@ body {
     animation-name: rubberBand, red_yellow;
     animation-duration: 1.2s, 1.5s; /* don't forget to set a duration! */
     animation-iteration-count: 1, 1;
+}
+.sub-menu{
+    margin-top: 30px;
+    background: rgba(63, 63, 82, 0.5);
+    border-radius: 10px;
+}
+.sub-menu textarea{
+    font-size: 17px;
+    width: 70%;
+    padding: 10px;
+    margin: 30px;
+    box-sizing: border-box;
+    margin-left: 100px;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+    color: #090b10;
+    border-radius: 10px;
+}
+.sub-menu input[type="text"], .sub-menu input[type="email"]{
+    background: transparent;
+    border-radius: 6px;
+    border: 1px solid white;
+    margin-left: 70px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 30px;
+    width: 600px;
+    font-size: 17px;
+    font-weight: 300;
+}
+.sub-menu label{
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.submition-btn{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	border: 1px solid #fff;
+	border-radius: 20px;
+	padding: 12px 34px;
+    margin-bottom: 10px;
+	font-size: 15px;
+    margin-left: 100px;
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+	transition: 0.45s;
+}
+.submition-btn:hover{
+	border: 1px solid rgb(144, 235, 238);
+	color: black;
+	background: rgb(144, 235, 238);
 }
 
 @keyframes red_yellow {
@@ -135,12 +248,26 @@ body {
     font-weight: normal;
 }
 
+footer .fa{
+  color: white;
+  transform: scale(3);
+}
+footer ul li{
+  list-style: none;
+  display: inline-block;
+}
+footer li{
+    margin-top: 40px;
+    margin-right: 60px;
+}
+
 .main__content {
     overflow-wrap: normal;
     margin: 50px;
     margin-left: 60px;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 350;
+    line-height: 30px;
 }
 
 .box {
@@ -176,7 +303,7 @@ body {
     width: 250px;
     height: 250px;
     border-radius: 30px;
-    transition: all 2s;
+    transition: all 0.5s;
 }
 
 .project:hover {
@@ -200,6 +327,10 @@ body {
 .img-wrapper:hover {
     box-shadow: 0px 0px 50px rgb(0, 17, 255);
 }
+.copy-write{
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
 
 @media screen and (max-width: 820px) {
     .head {
@@ -213,6 +344,19 @@ body {
     }
     .big {
         font-size: 70px;
+    }
+}
+@media (min-width: 1359px) {
+    .logo {
+        display: inline-block;
+        margin: 30px;
+        margin-left: 300px;
+        /* margin-top: 30%; */
+        width: 600px;
+        border-radius: 100%;
+        animation: fadeInDown;
+        animation-duration: 1s;
+        box-shadow: 0px 0px 100px aqua;
     }
 }
 /* width */
